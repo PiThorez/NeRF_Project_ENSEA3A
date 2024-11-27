@@ -99,7 +99,7 @@ def train_nerf(device):
 
         # Générer des rayons à partir des images et des caméras
         rays = generate_rays_from_images_and_cameras(images, camera_positions)
-
+        
         # Effectuer une passe avant pour obtenir les couleurs et densités
         color_and_density = render_3d_scene(rays, nerf_model, device)
 
@@ -143,6 +143,8 @@ if __name__ == "__main__":
     
     # Sélectionner le périphérique (GPU si disponible, sinon CPU)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    print(f"Using device: {device}")  # Devrait afficher 'cuda' si le GPU est utilisé
+
     
     # Entraîner le modèle NeRF
     trained_nerf = train_nerf(device)
