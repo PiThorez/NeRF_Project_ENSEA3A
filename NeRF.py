@@ -142,7 +142,7 @@ if __name__ == "__main__":
     camera_positions = load_camera_positions(camera_file_path)
     
     # Sélectionner le périphérique (GPU si disponible, sinon CPU)
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cpu" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")  # Devrait afficher 'cuda' si le GPU est utilisé
 
     
