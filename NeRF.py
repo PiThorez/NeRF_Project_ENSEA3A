@@ -134,8 +134,8 @@ def train_nerf(device):
 # Exécution principale
 if __name__ == "__main__":
     # Dossier contenant les images et fichier des caméras
-    images_folder = '/Users/pierre/Documents/GitHub/NeRF/images'
-    camera_file_path = '/Users/pierre/Documents/GitHub/NeRF/camera_positions.txt'  # Fichier texte avec les positions des caméras
+    images_folder = 'images'
+    camera_file_path = 'camera_positions.txt'  # Fichier texte avec les positions des caméras
     
     # Charger les images et les positions des caméras
     images = load_images_from_folder(images_folder)
