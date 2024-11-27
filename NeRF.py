@@ -7,11 +7,11 @@ from PIL import Image
 import torch.nn.functional as F
 
 # Hyperparamètres
-num_layers = 8  # Nombre de couches dans le MLP
-hidden_size = 256  # Taille des couches cachées
-learning_rate = 5e-4  # Taux d'apprentissage pour l'optimisation
+num_layers = 2  # Nombre de couches dans le MLP
+hidden_size = 8  # Taille des couches cachées
+learning_rate = 1e-3  # Taux d'apprentissage pour l'optimisation
 num_epochs = 10  # Nombre d'époques pour l'entraînement
-batch_size = 1024  # Taille du lot
+batch_size = 256  # Taille du lot
 
 # Fonction pour charger les images depuis le dossier
 def load_images_from_folder(folder):
